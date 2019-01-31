@@ -12,19 +12,37 @@ import org.jpacman.framework.model.IBoardInspector.SpriteType;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * random.
+ * @author raies
+ *
+ */
 public class FactoryIntegrationTest {
 
-	MapParser parser;
+    /**
+     * random.
+     */
+	private MapParser parser;
 
-	private String[] map = new String[] { "#####", "#...#", "#GPG#", "#   #",
+	/**
+	 * random.
+	 */
+	private String[] map = new String[] {"#####", "#...#", "#GPG#", "#   #",
 			"#####" };
 
+/**
+ * random.
+ */
 	@Before
 	public void setUp() {
 		IGameFactory factory = new DefaultGameFactory();
 		parser = new MapParser(factory);
 	}
 
+	/**
+	 * random.
+	 * @throws FactoryException
+	 */
 	@Test
 	public void testFullMap() throws FactoryException {
 		Game g = parser.parseMap(map);
