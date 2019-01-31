@@ -16,21 +16,47 @@ import org.junit.runners.Parameterized.Parameters;
 /**
  * Test the Board.tileAt method by means of a series of test cases with
  * Parameterized data.
- * 
+ *
  * @author Arie van Deursen, TU Delft, Feb 10, 2012
  */
 @RunWith(Parameterized.class)
 public class BoardTileAtTest {
-
+/**
+ * random text.
+ */
 	private int startx, starty;
+	/**
+	 * random text.
+	 */
 	private Direction dir;
+	/**
+	 * random text.
+	 */
 	private int nextx, nexty;
+	/**
+	 * random text.
+	 */
 	private Board board;
 
+	/**
+	 * random.
+	 */
 	private static final int WIDTH = 10;
+	/**
+	 * random.
+	 */
 	private static final int HEIGHT = 20;
 
-	public BoardTileAtTest(int x, int y, Direction d, int nx, int ny) {
+	/**
+	 *
+	 * @param x cordinaat
+	 * @param y cordinaat
+	 * @param d richting
+	 * @param nx nieuwe cordinaat
+	 * @param ny nieuwe cordinaat
+	 */
+	public BoardTileAtTest(final int x, final int y,
+	        final Direction d, final int nx, final int ny) {
 		startx = x;
 		starty = y;
 		dir = d;
@@ -38,7 +64,9 @@ public class BoardTileAtTest {
 		nexty = ny;
 		board = new Board(WIDTH, HEIGHT);
 	}
-
+/**
+ * random text.
+ */
 	@Test
 	public void testTileAtDirection() {
 		Tile source = board.tileAt(startx, starty);
@@ -47,6 +75,10 @@ public class BoardTileAtTest {
 		assertEquals(desired, actual);
 	}
 
+	/**
+	 * random text.
+	 * @return Collwction object
+	 */
 	@Parameters
 	public static Collection<Object[]> data() {
 		Object[][] values = new Object[][] {
